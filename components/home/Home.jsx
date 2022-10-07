@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getRobots } from '../../services/robots';
+import Table from '../table/Table';
 
 const Home = () => {
   const [robots, setRobots] = useState([]);
@@ -10,7 +11,12 @@ const Home = () => {
 
   console.log(robots);
 
-  return <div>Home Page</div>;
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <Table />
+    </div>
+  );
 };
 
 export default Home;
