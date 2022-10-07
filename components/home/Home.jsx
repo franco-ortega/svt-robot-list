@@ -11,12 +11,7 @@ const Home = () => {
 
   console.log(robots);
 
-  return (
-    <div>
-      <h1>Home Page</h1>
-      {robots.length > 0 && <Table robots={robots} />}
-    </div>
-  );
+  return <div>{robots.length > 0 && <Table robots={robots} />}</div>;
 };
 
 export default Home;
