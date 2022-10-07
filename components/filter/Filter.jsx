@@ -1,4 +1,4 @@
-const Filter = ({ setSearchId }) => {
+const Filter = ({ setSearchId, onExactMatchChange }) => {
   return (
     <div className='p-1'>
       <label className='fs-4' htmlFor='robotId'>
@@ -19,6 +19,7 @@ const Filter = ({ setSearchId }) => {
           className='ms-1 text-center'
           id='exactMatch'
           name='exactMatch'
+          onChange={onExactMatchChange}
         />
       </label>
     </div>
