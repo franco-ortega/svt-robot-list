@@ -9,8 +9,6 @@ const Home = () => {
     getRobots().then((res) => setRobots(res));
   }, []);
 
-  console.log(robots);
-
   return <div>{robots.length > 0 && <Table robots={robots} />}</div>;
 };
 
