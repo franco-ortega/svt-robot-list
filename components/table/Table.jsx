@@ -2,7 +2,7 @@ import Row from './Row';
 
 const Table = ({ robots }) => {
   return (
-    <div className='m-4'>
+    <div className='p-4 text-center'>
       <h2>Robots</h2>
       <div className='container border border-dark fs-5'>
         <Row
