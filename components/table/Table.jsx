@@ -2,12 +2,34 @@ import { useState } from 'react';
 import Filter from '../filter/Filter';
 import Row from './Row';
 
-const Table = ({ robots }) => {
+const Table = ({ robots, setRobots }) => {
   const [searchId, setSearchId] = useState('');
   const [robotsToDisplay, setRobotsToDisplay] = useState([]);
 
+  const [type, setType] = useState('id');
+  const [direction, setDirection] = useState('');
+
+  const onSortClick = (type, direction) => {
+    setType(type);
+    setDirection(direction);
+  };
+
+  const onIdSortAsc = () => {
+    onSortClick('id', 'asc');
+    const sortedIdAsc = [...robots].sort((a, b) => a.robotId - b.robotId);
+    setRobots(sortedIdAsc);
+  };
+  const onIdSortDes = () => {
+    onSortClick('id', 'des');
+    const sortedIdDes = [...robots].sort((a, b) => b.robotId - a.robotId);
+    setRobots(sortedIdDes);
+  };
+
   return (
     <div className='px-4 text-center'>
+      <button onClick={onIdSortAsc}>Sort Acs</button>
+      <button onClick={onIdSortDes}>Sort Des</button>
+
       <Filter
         robots={robots}
         searchId={searchId}
