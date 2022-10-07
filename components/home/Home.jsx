@@ -9,11 +9,7 @@ const Home = () => {
     getRobots().then((res) => setRobots(res));
   }, []);
 
-  return (
-    <div>
-      {robots.length > 0 && <Table robots={robots} setRobots={setRobots} />}
-    </div>
-  );
+  return <div>{robots.length > 0 && <Table robots={robots} />}</div>;
 };
 
 export default Home;

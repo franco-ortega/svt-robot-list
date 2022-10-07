@@ -2,14 +2,13 @@ import { useEffect, useState } from 'react';
 import Filter from '../filter/Filter';
 import Row from './Row';
 
-const Table = ({ robots, setRobots }) => {
+const Table = ({ robots }) => {
   const [searchId, setSearchId] = useState('');
   const [robotsToDisplay, setRobotsToDisplay] = useState([]);
-  console.log(searchId);
 
   useEffect(() => {
     const filteredRobots = robots.filter((robot) =>
-      searchId ? searchId === String(robot.robotId) : robot
+      searchId ? robot.robotId.includes(searchId) : robot
     );
 
     setRobotsToDisplay(filteredRobots);
