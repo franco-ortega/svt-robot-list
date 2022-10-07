@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div>
       <h1>Home Page</h1>
-      <Table />
+      {robots.length > 0 && <Table robots={robots} />}
     </div>
   );
 };

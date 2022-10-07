@@ -1,10 +1,10 @@
-const Row = () => {
+const Row = ({ robotId, batteryLevel, y, x }) => {
   return (
     <div className='row'>
-      <div className='col'>ID</div>
-      <div className='col'>Battery Level</div>
-      <div className='col'>Y</div>
-      <div className='col'>X</div>
+      <div className='col'>{robotId}</div>
+      <div className='col'>{batteryLevel}%</div>
+      <div className='col'>{y}</div>
+      <div className='col'>{x}</div>
     </div>
   );
 };
