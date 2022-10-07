@@ -7,8 +7,7 @@ const Table = ({ robots }) => {
   const [robotsToDisplay, setRobotsToDisplay] = useState([]);
 
   return (
-    <div className='p-4 text-center'>
-      <h2>Robots</h2>
+    <div className='px-4 text-center'>
       <Filter
         robots={robots}
         searchId={searchId}
