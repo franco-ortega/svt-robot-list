@@ -1,6 +1,17 @@
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
+import { getRobots } from '../services/robots';
 
 export default function Home() {
+  console.log('Home Page');
+  const [robots, setRobots] = useState([]);
+
+  useEffect(() => {
+    getRobots().then((res) => setRobots(res));
+  }, []);
+
+  console.log(robots);
+
   return (
     <div className=''>
       <Head>
