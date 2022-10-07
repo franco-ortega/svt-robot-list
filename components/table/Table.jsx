@@ -27,10 +27,10 @@ const Table = ({ robots, setRobots }) => {
           y='Y'
           x='X'
         />
-        {robotsToDisplay.map((robot) => (
+        {robotsToDisplay.map((robot, i) => (
           <Row
             key={robot.robotId}
-            rowNumber={robot.robotId}
+            rowNumber={i + 1}
             robotId={robot.robotId}
             batteryLevel={`${robot.batteryLevel}%`}
             y={robot.y}
