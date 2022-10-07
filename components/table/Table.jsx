@@ -1,34 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Filter from '../filter/Filter';
 import Row from './Row';
 
 const Table = ({ robots }) => {
   const [searchId, setSearchId] = useState('');
   const [robotsToDisplay, setRobotsToDisplay] = useState([]);
-  const [exactMatch, setExactMatch] = useState(false);
-
-  useEffect(() => {
-    const filteredRobots = robots.filter((robot) =>
-      searchId && exactMatch
-        ? searchId === String(robot.robotId)
-        : searchId
-        ? robot.robotId.includes(searchId)
-        : robot
-    );
-
-    setRobotsToDisplay(filteredRobots);
-  }, [robots, searchId, exactMatch]);
-
-  const onExactMatchChange = () => setExactMatch((prevState) => !prevState);
-
-  console.log(exactMatch);
 
   return (
     <div className='p-4 text-center'>
       <h2>Robots</h2>
       <Filter
+        robots={robots}
+        searchId={searchId}
         setSearchId={setSearchId}
-        onExactMatchChange={onExactMatchChange}
+        setRobotsToDisplay={setRobotsToDisplay}
       />
       <div className='container border border-dark fs-5'>
         <Row
