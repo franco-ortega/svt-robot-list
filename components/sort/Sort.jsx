@@ -1,40 +1,14 @@
 import { sortAsc, sortDes } from '../../utils/sort';
 
 const Sort = ({ robots, setRobots }) => {
-  const onIdSortAsc = () => {
-    const sortedIdAsc = sortAsc(robots, 'robotId');
-    setRobots(sortedIdAsc);
-  };
-  const onIdSortDes = () => {
-    const sortedIdDes = sortDes(robots, 'robotId');
-    setRobots(sortedIdDes);
-  };
-
-  const onBatterySortAsc = () => {
-    const sortedBatteryAsc = sortAsc(robots, 'batteryLevel');
-    setRobots(sortedBatteryAsc);
-  };
-  const onBatterySortDes = () => {
-    const sortedBatteryDes = sortDes(robots, 'batteryLevel');
-    setRobots(sortedBatteryDes);
-  };
-
-  const onYSortAsc = () => {
-    const sortedYAsc = sortAsc(robots, 'y');
-    setRobots(sortedYAsc);
-  };
-  const onYSortDes = () => {
-    const sortedYDes = sortDes(robots, 'y');
-    setRobots(sortedYDes);
-  };
-  const onXSortAsc = () => {
-    const sortedXAsc = sortAsc(robots, 'x');
-    setRobots(sortedXAsc);
-  };
-  const onXSortDes = () => {
-    const sortedXDes = sortDes(robots, 'x');
-    setRobots(sortedXDes);
-  };
+  const onIdSortAsc = () => setRobots(sortAsc(robots, 'robotId'));
+  const onIdSortDes = () => setRobots(sortDes(robots, 'robotId'));
+  const onBatterySortAsc = () => setRobots(sortAsc(robots, 'batteryLevel'));
+  const onBatterySortDes = () => setRobots(sortDes(robots, 'batteryLevel'));
+  const onYSortAsc = () => setRobots(sortAsc(robots, 'y'));
+  const onYSortDes = () => setRobots(sortDes(robots, 'y'));
+  const onXSortAsc = () => setRobots(sortAsc(robots, 'x'));
+  const onXSortDes = () => setRobots(sortDes(robots, 'x'));
 
   return (
     <div>
