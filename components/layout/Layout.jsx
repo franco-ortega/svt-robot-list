@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 const Layout = ({ children }) => {
   return (
-    <div className='bg-secondary bg-gradient bg-opacity-25 p-2'>
+    <div className='bg-secondary bg-gradient bg-opacity-25 p-2 min-vh-100'>
       <Head>
         <title>SVT Robot List</title>
         <meta name='description' content='List of SVT robots' />
