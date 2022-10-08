@@ -23,7 +23,7 @@ const Filter = ({ robots, searchId, setSearchId, setRobotsToDisplay }) => {
         <label className='' htmlFor='robotId'>
           Filter by Robot ID:
           <input
-            className='ms-2 h-25 w-25 text-center'
+            className='ms-2 w-25 text-center'
             type='number'
             placeholder='ID'
             id='robotId'
