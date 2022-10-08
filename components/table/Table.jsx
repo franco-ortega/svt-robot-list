@@ -16,7 +16,7 @@ const Table = ({ robots, setRobots }) => {
         setSearchId={setSearchId}
         setRobotsToDisplay={setRobotsToDisplay}
       />
-      <div className='container border border-dark fs-5'>
+      <div className='container border border-dark fs-5 mw-75'>
         <Row
           rowNumber='0'
           robotId='ID'
