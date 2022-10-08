@@ -21,3 +21,11 @@ export const sortItemsAsc = (items, type, stateSetter) => {
 export const sortItemsDes = (items, type, stateSetter) => {
   sortItems(items, type, stateSetter, 'des');
 };
+
+export const sortAsc = (list, type) => {
+  return [...list].sort((a, b) => a[type] - b[type]);
+};
+
+export const sortDes = (list, type) => {
+  return [...list].sort((a, b) => b[type] - a[type]);
+};
