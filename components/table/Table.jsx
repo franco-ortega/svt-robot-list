@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import Filter from '../filter/Filter';
+import Sort from '../sort/Sort';
 import Row from './Row';
 
-const Table = ({ robots }) => {
+const Table = ({ robots, setRobots }) => {
   const [searchId, setSearchId] = useState('');
   const [robotsToDisplay, setRobotsToDisplay] = useState([]);
 
   return (
     <div className='px-4 text-center'>
+      <Sort robots={robots} setRobots={setRobots} />
       <Filter
         robots={robots}
         searchId={searchId}
